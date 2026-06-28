@@ -97,8 +97,11 @@ body {
 
 .btn {
     display: inline-flex; align-items: center; gap: 8px;
-    font-size: 16px; font-weight: 600; text-decoration: none;
+    font-size: 16px; font-weight: 600; font-family: inherit; text-decoration: none;
     padding: 13px 26px; border-radius: 12px; transition: transform .12s ease, filter .12s ease;
+    /* сброс нативных стилей <button> — иначе у кнопки-элемента (Поддержать) вылезает рамка/чужой
+       шрифт/iOS-обводка, в отличие от <a>. Рамку .btn-ghost задаёт после и не теряет. */
+    border: 0; cursor: pointer; -webkit-appearance: none; appearance: none;
 }
 .btn:hover { transform: translateY(-2px); }
 .btn-primary { background: var(--grad); color: #fff; box-shadow: 0 8px 24px rgba(59,130,246,0.35); }
