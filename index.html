@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FootballCards — карточный футбольный менеджер</title>
+    <meta name="description" content="FootballCards — карточная футбольная менеджерская игра. Веди клуб от первого матча до континентальных кубков. Windows и Android." />
+    <link rel="canonical" href="https://playfootballcards.com/" />
+
+    <!-- Open Graph / Twitter — превью при шеринге ссылки -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://playfootballcards.com/" />
+    <meta property="og:title" content="FootballCards — карточный футбольный менеджер" />
+    <meta property="og:description" content="Веди клуб от первого матча до континентальных кубков. Windows и Android." />
+    <meta property="og:image" content="https://playfootballcards.com/img/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <!-- переключатель языка -->
+    <div class="lang-switch">
+        <button type="button" data-lang="ru">RU</button>
+        <button type="button" data-lang="en">EN</button>
+    </div>
+
+    <!-- ambient свечение по углам (см. DESIGN_LANGUAGE 2.6) -->
+    <div class="ambient ambient-tr"></div>
+    <div class="ambient ambient-bl"></div>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero section">
+        <div class="hero-glow"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-copy">
+                <img class="hero-logo" src="/img/logo.png" alt="FootballCards — карточный футбольный менеджер" />
+                <h1 class="hero-title" data-i18n="hero_title">Карточный футбольный менеджер</h1>
+                <p class="lead" data-i18n="hero_lead">Веди клуб от первого матча до континентальных кубков. Тактика,
+                    состав, погода и нервный ручной матч — колода против колоды.</p>
+                <div class="cta-row">
+                    <!-- Кнопка «Скачать» скрыта до релиза — вернуть рядом с «Что внутри» при запуске загрузок -->
+                    <a class="btn btn-primary" href="#features" data-i18n="cta_features">Что внутри</a>
+                </div>
+                <div class="hero-meta" data-i18n="hero_meta">Windows · Android · бесплатно, паки по желанию</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section section-alt" id="features">
+        <div class="wrap">
+            <h2 class="section-title" data-i18n="feat_title">Что внутри</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-ico">🏆</div>
+                    <h3 data-i18n="f1h">Карьера и турниры</h3>
+                    <p data-i18n="f1p">Полный сезон: чемпионат, кубок страны, континентальные кубки. Веди команду из года в год.</p>
+                </div>
+                <div class="card">
+                    <div class="card-ico">🃏</div>
+                    <h3 data-i18n="f2h">Матч — это колода</h3>
+                    <p data-i18n="f2p">Ручной матч идёт картами: моменты, тактика «камень-ножницы», влияние силы и погоды.</p>
+                </div>
+                <div class="card">
+                    <div class="card-ico">🌍</div>
+                    <h3 data-i18n="f3h">Реальные лиги</h3>
+                    <p data-i18n="f3p">Россия, топ-Европа и паки: 12 лиг Европы и Южная Америка — Бразилия, Аргентина, Либертадорес.</p>
+                </div>
+                <div class="card">
+                    <div class="card-ico">📈</div>
+                    <h3 data-i18n="f4h">Развитие команды</h3>
+                    <p data-i18n="f4p">Карты опыта, рост силы, трофеи менеджера, таблицы и история сезонов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SCREENSHOTS ===== -->
+    <section class="section" id="shots">
+        <div class="wrap">
+            <h2 class="section-title" data-i18n="shots_title">Скриншоты</h2>
+            <!-- src переключается по языку в site.js: /img/shotN.{lang}.png (RU как фолбэк) -->
+            <div class="shots">
+                <figure class="shot">
+                    <img data-img="shot1" src="/img/shot1.ru.png" alt="" loading="lazy" />
+                    <figcaption data-i18n="shot1">Экран матча</figcaption>
+                </figure>
+                <figure class="shot">
+                    <img data-img="shot2" src="/img/shot2.ru.png" alt="" loading="lazy" />
+                    <figcaption data-i18n="shot2">Главный экран</figcaption>
+                </figure>
+                <figure class="shot">
+                    <img data-img="shot3" src="/img/shot3.ru.png" alt="" loading="lazy" />
+                    <figcaption data-i18n="shot3">Тактика</figcaption>
+                </figure>
+                <figure class="shot">
+                    <img data-img="shot4" src="/img/shot4.ru.png" alt="" loading="lazy" />
+                    <figcaption data-i18n="shot4">Календарь</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел «Скачать» вынесен на приватную страницу (download-7q3m9k.html, noindex, не в sitemap).
+         Публичный лендинг индексируется, но загрузок не показывает — качать можно только по прямой ссылке. -->
+
+    <!-- ===== ДРУЗЬЯ ===== -->
+    <section class="section" id="friends">
+        <div class="wrap">
+            <h2 class="section-title" data-i18n="friends_title">Друзья</h2>
+            <p class="friends-intro" data-i18n="friends_intro">Проекты, которые мы любим и рекомендуем.</p>
+            <div class="friend">
+                <img class="friend-logo" src="/img/sofl.png" alt="Special One Football League (SOFL)" />
+                <div class="friend-body">
+                    <h3 class="friend-name">Special One Football League (SOFL)</h3>
+                    <p class="friend-desc" data-i18n="friends_sofl">Футбольный онлайн менеджер-симулятор в браузере.
+                        Берёшь команду, расставляешь тактику, торгуешь на трансферах, прокачиваешь академию, играешь
+                        чемпионат / кубок / еврокубки. Параллельно играют все остальные клубы из всех лиг — мир общий.
+                        Игровые дни 3 раза в неделю (пн, ср, пт).</p>
+                    <a class="btn btn-primary friend-btn" href="https://app.soflfm.ru" target="_blank" rel="noopener"
+                       data-i18n="friends_cta">Играть в SOFL ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПОДДЕРЖАТЬ ===== -->
+    <section class="section section-alt" id="support">
+        <div class="wrap">
+            <h2 class="section-title" data-i18n="support_title">Поддержать</h2>
+            <p class="support-intro" data-i18n="support_intro">FootballCards делает один человек, и игра остаётся
+                бесплатной. Если она вам нравится — можно поддержать любой суммой. Это ничего не разблокирует, просто
+                помогает делать игру дальше. Спасибо!</p>
+            <div class="support-box">
+                <div class="support-presets">
+                    <button type="button" class="btn btn-ghost" data-amount="100">100 ₽</button>
+                    <button type="button" class="btn btn-ghost" data-amount="250">250 ₽</button>
+                    <button type="button" class="btn btn-ghost" data-amount="500">500 ₽</button>
+                    <button type="button" class="btn btn-ghost" data-amount="1000">1000 ₽</button>
+                </div>
+                <div class="support-row">
+                    <input type="number" id="support-amount" min="50" step="10" placeholder="500"
+                           inputmode="numeric" aria-label="Сумма, ₽" />
+                    <input type="email" id="support-email" placeholder="player@mail.ru" aria-label="Email" />
+                    <button type="button" class="btn btn-primary" id="support-btn" data-i18n="support_btn">Поддержать</button>
+                </div>
+                <div class="support-status" id="support-status" role="status"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <div class="footer-brand">FootballCards</div>
+            <nav class="footer-links">
+                <a href="#friends" data-i18n="foot_friends">Друзья</a>
+                <a href="#support" data-i18n="foot_support">Поддержать</a>
+                <a href="/offer.html" data-i18n="foot_offer">Оферта</a>
+                <a href="/privacy.html" data-i18n="foot_privacy">Конфиденциальность</a>
+                <a href="/terms.html" data-i18n="foot_terms">Соглашение</a>
+                <a href="/contacts.html" data-i18n="foot_contacts">Контакты</a>
+                <a href="mailto:papokat@gmail.com">papokat@gmail.com</a>
+            </nav>
+            <div class="footer-copy">© FootballCards</div>
+        </div>
+    </footer>
+
+    <script src="/js/site.js"></script>
+</body>
+</html>

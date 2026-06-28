@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://playfootballcards.com/sitemap.xml
