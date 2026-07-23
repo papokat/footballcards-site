@@ -150,6 +150,7 @@ body {
 .dl-name { font-size: 18px; font-weight: 700; }
 .dl-sub { font-size: 13px; color: var(--text-faint); margin-top: 4px; }
 .dl-soon { opacity: .55; pointer-events: none; }
+.dl-featured { border-color: var(--accent); box-shadow: 0 0 24px rgba(59, 130, 246, .20); }
 .dl-ver { font-size: 12px; font-weight: 700; color: var(--accent); margin-top: 6px; min-height: 14px; }
 
 .apk-note {

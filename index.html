@@ -40,8 +40,8 @@
                 <p class="lead" data-i18n="hero_lead">Веди клуб от первого матча до континентальных кубков. Тактика,
                     состав, погода и нервный ручной матч — колода против колоды.</p>
                 <div class="cta-row">
-                    <!-- Кнопка «Скачать» скрыта до релиза — вернуть рядом с «Что внутри» при запуске загрузок -->
-                    <a class="btn btn-primary" href="#features" data-i18n="cta_features">Что внутри</a>
+                    <a class="btn btn-primary" href="#download" data-i18n="cta_download">⬇ Скачать</a>
+                    <a class="btn btn-ghost" href="#features" data-i18n="cta_features">Что внутри</a>
                 </div>
                 <div class="hero-meta" data-i18n="hero_meta">Windows · Android · бесплатно, паки по желанию</div>
             </div>
@@ -103,8 +103,43 @@
         </div>
     </section>
 
-    <!-- Раздел «Скачать» вынесен на приватную страницу (download-7q3m9k.html, noindex, не в sitemap).
-         Публичный лендинг индексируется, но загрузок не показывает — качать можно только по прямой ссылке. -->
+    <!-- ===== DOWNLOAD ===== -->
+    <section class="section section-alt" id="download">
+        <div class="wrap">
+            <h2 class="section-title" data-i18n="dl_title">Скачать</h2>
+            <div class="dl-row">
+                <a class="dl-card" id="dl-win" href="#">
+                    <div class="dl-ico">🖥️</div>
+                    <div class="dl-name">Windows</div>
+                    <div class="dl-sub" data-i18n="dl_win_sub">.exe · 64-bit</div>
+                    <div class="dl-ver" id="dl-win-ver"></div>
+                </a>
+                <a class="dl-card dl-featured" href="https://www.rustore.ru/catalog/app/com.footballcards.app"
+                   target="_blank" rel="noopener">
+                    <div class="dl-ico">🛒</div>
+                    <div class="dl-name">RuStore</div>
+                    <div class="dl-sub" data-i18n="dl_rustore_sub">Android · автообновление</div>
+                    <div class="dl-ver" data-i18n="dl_rustore_badge">рекомендуем</div>
+                </a>
+                <a class="dl-card" id="dl-apk" href="#">
+                    <div class="dl-ico">🤖</div>
+                    <div class="dl-name" data-i18n="dl_apk_name">Android (APK)</div>
+                    <div class="dl-sub" data-i18n="dl_apk_sub">прямая установка</div>
+                    <div class="dl-ver" id="dl-apk-ver"></div>
+                </a>
+            </div>
+            <div class="apk-note" data-i18n="win_note">
+                <strong>Windows предупредит (SmartScreen):</strong> «Система Windows защитила ваш компьютер» —
+                это нормально для нового приложения без раскрученной репутации. Нажми «Подробнее» →
+                «Выполнить в любом случае».
+            </div>
+            <div class="apk-note" data-i18n="apk_note">
+                <strong>Как поставить APK:</strong> открой файл на телефоне → если попросит,
+                разреши «установку из неизвестных источников» для браузера/проводника → установить.
+                Проще — поставить из RuStore: обновления придут сами.
+            </div>
+        </div>
+    </section>
 
     <!-- ===== ДРУЗЬЯ ===== -->
     <section class="section" id="friends">
@@ -156,6 +191,7 @@
         <div class="wrap footer-inner">
             <div class="footer-brand">FootballCards</div>
             <nav class="footer-links">
+                <a href="#download" data-i18n="foot_download">Скачать</a>
                 <a href="#friends" data-i18n="foot_friends">Друзья</a>
                 <a href="#support" data-i18n="foot_support">Поддержать</a>
                 <a href="/offer.html" data-i18n="foot_offer">Оферта</a>
