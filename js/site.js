@@ -181,9 +181,11 @@
     // Карточки «Скачать»: тянем version.json и проставляем ссылку + версию каждой платформе.
     // Сервер недоступен — карточки просто остаются без версии (клик ни на что не ведёт).
     function setupDownloads() {
+        // android.url ведёт на эту же страницу (её читает обновлятор в игре), поэтому кнопка
+        // APK берёт прямой файл из android.apkUrl. windows — из windows.url.
         var map = [
-            { card: "dl-win", ver: "dl-win-ver", key: "windows" },
-            { card: "dl-apk", ver: "dl-apk-ver", key: "android" }
+            { card: "dl-win", ver: "dl-win-ver", key: "windows", link: "url" },
+            { card: "dl-apk", ver: "dl-apk-ver", key: "android", link: "apkUrl" }
         ];
         fetch(DOWNLOADS_MANIFEST, { cache: "no-store" })
             .then(function (r) { return r.json(); })
@@ -192,8 +194,9 @@
                     var info = m && m[it.key];
                     var card = document.getElementById(it.card);
                     var verEl = document.getElementById(it.ver);
-                    if (!card || !info || !info.url) return;
-                    card.setAttribute("href", info.url);
+                    var href = info && info[it.link];
+                    if (!card || !info || !href) return;
+                    card.setAttribute("href", href);
                     card.setAttribute("target", "_blank");
                     card.setAttribute("rel", "noopener");
                     if (verEl && info.version) verEl.textContent = "v" + info.version;
